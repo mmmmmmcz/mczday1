@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div">
+        <p class="p1"></p>
+        <p class="p2"></p>
+        <p class="p3"></p>
+    </div>
+
+    <ul>
+        <li>新闻</li>
+        <li>娱乐</li>
+        <li>体育</li>
+        <li>电影</li>
+        <li>音乐</li>
+        <li>旅游</li>
+    </ul>
+
+
+    <script>
+        // // 获取页面中的各个元素
+        // var hong = document.querySelector('.p1')
+        // var lv = document.querySelector('.p2')
+        // var hei = document.querySelector('.p3')
+        var ul = document.querySelector('ul')
+        var body = document.querySelector('body')
+
+        // // 点击p标签的元素
+        // hong.onclick = function(){
+        //     ul.style.backgroundColor = 'red'
+        //     body.style.backgroundColor = 'pink'
+        // }
+        // lv.onclick = function(){
+        //     ul.style.backgroundColor = 'green'
+        //     body.style.backgroundColor = 'yellowgreen'
+        // }
+        // hei.onclick = function(){
+        //     ul.style.backgroundColor = 'black'
+        //     body.style.backgroundColor = 'grey'
+        // }
+
+        var backgrounds = ['red', 'green', 'black'];
+        var colors = ['pink', 'yellowgreen', 'grey'];
+
+        var ps = document.querySelectorAll('.div p');
+        for (var i = 0; i < ps.length; i++) {
+            ps[i].index = i;
+            ps[i].onclick = function () {
+                ul.style.backgroundColor = backgrounds[this.index];
+                body.style.backgroundColor = colors[this.index];
+            }
+        }
+
+
+        // var backgrounds = ['red', 'green', 'black'];
+        // var colors = ['pink', 'yellowgreen', 'grey'];
+        // function qiehuan(text, color) {
+        //     document.querySelector(text).style.backgroundColor = color;
+        // }
+        // var ps = document.querySelectorAll('.div p');
+        // for (var i = 0; i < ps.length; i++) {
+        //     ps[i].index = i;
+        //     ps[i].onclick = function () {
+        //         qiehuan('ul', backgrounds[this.index])
+        //         qiehuan('body', colors[this.index])
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .div {
+        width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px;
+    }
+
+    .div .p1 {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+    }
+
+    .div .p2 {
+        width: 20px;
+        height: 20px;
+        background-color: green;
+    }
+
+    .div .p3 {
+        width: 20px;
+        height: 20px;
+        background-color: #000;
+    }
+
+    ul {
+        border: 1px solid green;
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50px;
+    }
+
+    ul li {
+        width: 50px;
+        list-style: none;
+        border-right: 1px solid green;
+        color: green;
+        text-align: center;
+    }
+</style>

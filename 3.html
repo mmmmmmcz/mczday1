@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="found" value="北京市"><br />
+    <input type="text" name="found" value="朝阳区"><br />
+    <button>传参</button>
+
+
+    <script>
+        var button = document.querySelector('button')
+        var found = document.getElementsByName('found')
+        button.onclick = function () {
+            for (var i = 0; i < found.length; i++) {
+                alert(found[i].value)
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+<style>
+    input {
+        margin-top: 5px;
+    }
+
+    button {
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+</style>

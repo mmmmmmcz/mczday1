@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="wid">变宽</button>
+    <button class="len">变高</button>
+    <button class="ys">变色</button>
+    <button class="block">隐藏</button>
+    <button class="agion">重置</button>
+
+    <div class="div"></div>
+    <script>
+        // 获取元素
+        var wid = document.querySelector('.wid')
+        var div = document.querySelector('.div')
+        var len = document.querySelector('.len')
+        var ys = document.querySelector('.ys')
+        var block = document.querySelector('.block')
+        var agion = document.querySelector('.agion')
+        // 点击变宽
+        wid.onclick = function(){
+            div.style.width = '300px'
+        }
+        // 点击变高
+        len.onclick = function(){
+            div.style.height = '300px'
+        }
+        // 点击变色
+        ys.onclick = function(){
+            div.style.background = 'red'
+        }
+        // 点击隐藏
+        block.onclick = function(){
+            div.style.display = 'none'
+        }
+        // 点击重置
+        agion.onclick = function(){
+            div.style = 'none'
+        }
+    </script>
+</body>
+</html>
+
+
+<style>
+    .div{
+        width: 100px;
+        height: 100px;
+        background-color: #000;
+        margin-top: 10px;
+        margin-left: 50px;
+        border: 5px solid #ccc;
+    }
+</style>
